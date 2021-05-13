@@ -4,3 +4,31 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+body {
+  display: grid;
+  grid-template-areas: "header header"
+                       "nav nav"
+                       "sidebar main"
+                       "footer footer";
+  grid-template-columns: 1fr 2fr;
+}
+.header {
+  grid-area: header;
+  background-color: red;
+}
+.nav {
+  grid-area: nav;
+  background-color: green;
+}
+.main {
+  grid-area: main;
+  background-color: orange;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: purple;
+}
+.footer {
+  grid-area: footer;
+  background-color: blue;
+}
