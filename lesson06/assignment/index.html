@@ -5,11 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
     <body>
         <main class="main">
-          
+          <h1>Webpage using Bootstrap</h1>
+          <section>
+            <h2>Under Construction</h2>
+            <p>More to come</p>
+          </section>
+          <section>
+            <h2>Make a Donation</h2>
+            <p>This website is run on donations from people like you. Even sparing just $1 helps!</p>
+
+            <form class="formy" action="index.html" method="post">
+              <div class="formInput">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+              </div>
+              <div class="formInput">
+                <label for="zipCode">Zip Code:</label>
+                <input type="text" name="zipCode" id="zipCode">
+              </div>
+              <div class="formInput">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" name="cardNumber" id="cardNumber">
+              </div>
+              <div class="formInput">
+                <input type="checkbox" name="coverTransactionFee" id="coverTransactionFee" value="coverTransactionFee">
+                <label for="coverTransactionFee">I want to cover the transaction fees for this donation</label>
+              </div>
+              <div class="formInput">
+                <input type="checkbox" name="makeMonthly" id="makeMonthly" value="makeMonthly">
+                <label for="makeMonthly">I want to make this a monthly donation</label>
+              </div>
+              <div class="formInput">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </section>
         </main>
     </body>
 </html>
