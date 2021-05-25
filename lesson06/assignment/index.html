@@ -16,36 +16,44 @@
             <h2>Under Construction</h2>
             <p>More to come</p>
           </section>
-          <section>
+          <section class="container">
             <h2>Make a Donation</h2>
             <p>This website is run on donations from people like you. Even sparing just $1 helps!</p>
 
-            <form class="formy" action="index.html" method="post">
-              <div class="formInput">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
+            <form class="formy">
+              <div class="formInput row">
+                <label for="name" class="col-2">Name:</label>
+                <input type="text" class="col-4" name="name" id="name">
               </div>
-              <div class="formInput">
-                <label for="zipCode">Zip Code:</label>
-                <input type="text" name="zipCode" id="zipCode">
+              <div class="formInput row">
+                <label for="cardNumber" class="col-2">Card Number:</label>
+                <input type="text" class="col-4" name="cardNumber" id="cardNumber">
               </div>
-              <div class="formInput">
-                <label for="cardNumber">Card Number:</label>
-                <input type="text" name="cardNumber" id="cardNumber">
+              <div class="formInput row">
+                <label for="zipCode" class="col-2">Zip Code:</label>
+                <input type="text" class="col-2" name="zipCode" id="zipCode">
               </div>
-              <div class="formInput">
-                <input type="checkbox" name="coverTransactionFee" id="coverTransactionFee" value="coverTransactionFee">
-                <label for="coverTransactionFee">I want to cover the transaction fees for this donation</label>
+              <div class="formInput row">
+                <label for="cvv" class="col-2">CVV:</label>
+                <input type="text" class="col-2" name="cvv" id="cvv">
               </div>
-              <div class="formInput">
-                <input type="checkbox" name="makeMonthly" id="makeMonthly" value="makeMonthly">
-                <label for="makeMonthly">I want to make this a monthly donation</label>
+              <div class="formInput row">
+                <div class="offset-md-2 col-6">
+                  <input type="checkbox" name="coverTransactionFee" id="coverTransactionFee" value="coverTransactionFee">
+                  <label for="coverTransactionFee">I want to cover the transaction fees for this donation</label>
+                </div>
               </div>
-              <div class="formInput">
-                <input type="submit" value="Submit">
+              <div class="formInput row">
+                <div class="offset-md-2 col-6">
+                  <input type="checkbox" name="makeMonthly" id="makeMonthly" value="makeMonthly">
+                  <label for="makeMonthly">I want to make this a monthly donation</label>
+                </div>
               </div>
+              <input id="formSubmitButton" type="submit" value="Submit">
             </form>
           </section>
         </main>
+
+        <script src="./scripts/scripts.js" charset="utf-8"></script>
     </body>
 </html>
