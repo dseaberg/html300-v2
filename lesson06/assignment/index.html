@@ -12,9 +12,46 @@
     <body>
         <main class="main">
           <h1>Webpage using Bootstrap</h1>
-          <section>
-            <h2>Under Construction</h2>
-            <p>More to come</p>
+          <section class="container">
+            <h2>Movie List</h2>
+            <div class="accordion" id="movieListAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="movieTitle1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#movieCollapse1">
+                    Knives Out
+                  </button>
+                </h3>
+                <div id="movieCollapse1" class="accordion-collapse collapse" data-bs-parent="#movieListAccordion">
+                  <div class="accordion-body">
+                    <p>A wealthy author is found dead and all of his shady descenants are suspects.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="movieTitle2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#movieCollapse2">
+                    Jurasic Park
+                  </button>
+                </h3>
+                <div id="movieCollapse2" class="accordion-collapse collapse" data-bs-parent="#movieListAccordion">
+                  <div class="accordion-body">
+                    <p>A scientist grows dinosaurs back to life using their DNA, and create an amusment park to show them off. Of course things go wrong.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="movieTitle3">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#movieCollapse3">
+                    Inglorious Basterds
+                  </button>
+                </h3>
+                <div id="movieCollapse3" class="accordion-collapse collapse" data-bs-parent="#movieListAccordion">
+                  <div class="accordion-body">
+                    <p>A small group of soldiers hunt after Nazis in WWII.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
           <section class="container">
             <h2>Make a Donation</h2>
