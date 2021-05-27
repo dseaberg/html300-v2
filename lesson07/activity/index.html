@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Activity 07 - Vue</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+      <div id="app">
+        <p v-bind:title="info">Counter: {{ counter }}</p>
+        <button type="button" v-on:click="plusOne">Increment</button>
+        <button type="button" v-on:click="plusMore(2)">Add Two</button>
+        <p v-if="name === 'Dane'">{{ generateGreeting() }} {{ name }}</p>
+        <p v-else>Name: unknown</p>
+        <ul>
+          <li v-for="item in groceryList">
+            {{ item }}
+          </li>
+        </ul>
+
+        <p v-if="imageShowing">Image width: {{imageWidth}}</p>
+        <img v-if="imageShowing" v-bind:src="imageSrc" alt="A random image">
+        <button v-if="!imageShowing" type="button" v-on:click="toggleImage">Show Image</button>
+      </div>
+
+      <script type="text/javascript">
+        const width = 200 + Math.floor(Math.random() * 300);
+        const CounterApp = {
+          data() {
+            return {
+              counter: 0,
+              name: "Dane",
+              info: "Refresh counter",
+              groceryList: [
+                "Strawberries",
+                "Flour",
+                "Milk"
+              ],
+              imageShowing: false,
+              imageSrc: "https://picsum.photos/" + width,
+              imageWidth: width
+            }
+          },
+          methods: {
+            generateGreeting() {
+              return "Hello";
+            },
+            plusOne() {
+              this.counter++;
+            },
+            plusMore(amount) {
+              this.counter += parseInt(amount);
+            },
+            toggleImage() {
+              if (!this.imageShowing) {
+                this.imageShowing = true;
+              } else {
+                this.imageShowing = false;
+              }
+            }
+          }
+        };
+
+        Vue.createApp(CounterApp).mount('#app');
+      </script>
+
+    </body>
+</html>
